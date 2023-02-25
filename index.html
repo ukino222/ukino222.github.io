@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto CV Alumno Ignacio Zanella</title>
+        <link rel="stylesheet" href="./CSS/estilos.css">
+        <link rel="functions" href="./JS/funciones.js">
+        <link rel="icon" type="image/x-icon" href="./imagenes/favicon_azul.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin&family=Convergence&family=Archivo+Black&family=Roboto">
+        <!-- datos de Open Graph -->
+        <meta property="og:title" content="CV de Julio Varela" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content=" http://www.juliovarela.com.ar" />
+        <meta property="og:image" content=" https://randomuser.me/api/portraits/men/20.jpg" />
+        <meta property="og:description" content="Descubrí el curriculum vitae de Julio Varela y contratalo" />
+    
+    
+    </head>
+    <body>
+      <div id="inicio"></div>
+      <ul id="menu">
+        <li class="selector_barra"><a class="inicio_menu" href="#inicio">Inicio</a></li>
+        <li class="selector_barra"><a href="#objetivos">Objetivos</a></li>
+        <li class="selector_barra"><a href="#experiencia">Experiencia</a></li>
+        <li class="selector_barra"><a href="#habilidades">Habilidades</a></li>
+        <li class="selector_barra"><a href="#educacion">Educación</a></li>
+        <li class="selector_barra"><a href="#idiomas">Idiomas</a></li>
+        <li class="selector_barra"><a href="#contacto">Contacto</a></li>
+      </ul>
+    <!-- Tomé la decisión de que la barra tenga una pequeña luz con el margen superior del body 
+      para darle más dinamismo visual en su desplazamiento y que luego quede fija-->
+      <h1>CURRICULUM VITAE</h1>
+    
+      <a href="#contacto">
+       <img id="foto_perfil" src="./imagenes/foto-perfil.jpg" alt="Foto de perfil" title="¡Contactame!">
+      </a>
+    
+    <div id="presentacion">
+      <p>Mi nombre es JULIO VARELA. Soy Ejecutivo en ventas y en compras corporativas. Manejo sólidos fundamentos de marketing. Nací el 10 de noviembre de 1990. Casado y con dos hijos. Resido en la Ciudad de Buenos Aires. Cuento con movilidad propia. Para conocerme mejor, te invito a recorrer mi página web.</p>
+    </div>
+
+    <div id="objetivos">
+     <article>
+      <img class="iconos_categoria" src="./imagenes/objetivos.svg" alt="icono objetivos">
+      <h3>OBJETIVOS</h3>
+      <div class="listas">
+        <ul>
+           <li>Aportar una mejora a la empresa en las tareas que estén a mi cargo.</li>
+           <li>Superar las expectativas propias y ajenas en cada desafío que deba encarar.</li>
+           <li>Construir un camino propio a través de la colaboración con el trabajo en equipo.</li>
+           <li>Ser receptivo a los cambios de un mundo laboral dinámico.</li>
+           <li>Mi lema es: "estar predispuesto para lo mejor y preparado para lo peor".</li>
+        </ul>
+      </div>
+     </article>
+    </div>  
+    
+    <div id="icono_wapp">
+     <img id="boton_wapp" src="./imagenes/whatsapp-logo.png" alt="icono de whatsapp" title="Enviame un whatsapp" type="submit" onclick="wapp()" target="_blank">
+    </div>
+    
+    <div id="icono_linkedin">
+     <img id="boton_linkedin" src="./imagenes/linkedin-logo.png" alt="icono de linkedin" title="¡Conoceme mejor!" onclick="linkedin()" target="_blank">
+    </div>
+    
+    <div id="icono_facebook">
+      <img id="boton_facebook" src="./imagenes/facebook-logo.png" alt="icono de facebook" title="¡Conoceme mejor!" onclick="facebook()" target="_blank">
+    </div>
+    
+    <div id="experiencia">
+     <article>
+        <img class="iconos_categoria" src="./imagenes/experiencia.svg" alt="icono experiencia">
+        <h3>EXPERIENCIA</h3>
+         <h4 class="subtitulo1">Director de Compras y Suministros<img id="colgate" src="./imagenes/colgate-logo.svg" onclick="colgate_web()" title="Ir a la web de Colgate" alt="colgate-palmolive logo"></h4>
+         <p class="subtitulo2">COLGATE-PALMOLIVE</p>
+          <span class="ocultar" id="puesto1">
+            <p id="colgate-txt"></p> <!-- carga el contenido del texto mediante Fetch API -->
+          </span>
+        <button class="boton-leer-mas" onclick="abre_texto_puesto1()">Leer más</button>
+      
+         <h4 class="subtitulo1">Representante de Ventas Senior<img id="telecom" src="./imagenes/telecom-logo.svg" onclick="telecom_web()" title="Ir a la web de Telecom" alt="telecom logo"></h4>
+         <p class="subtitulo2">TELECOM</p>
+          <span class="ocultar" id="puesto2">
+            <p id="telecom-txt"></p> <!-- carga el contenido del texto mediante Fetch API -->
+          </span>
+        <button class="boton-leer-mas" onclick="abre_texto_puesto2()">Leer más</button>
+      
+         <h4 class="subtitulo1">Director de Compras<img id="rodinar" src="./imagenes/rodinar-logo.png" onclick="rodinar_web()" title="Ir a la web de Rodinar" alt="rodinar logo"></h4>
+         <p class="subtitulo2">RODINAR</p>
+          <span  class="ocultar" id="puesto3">
+            <p id="rodinar-txt"></p> <!-- carga el contenido del texto mediante Fetch API -->
+          </span>                
+          <button class="boton-leer-mas" onclick="abre_texto_puesto3()">Leer más</button>   
+          
+         <h4 class="subtitulo1">Vendedor de Salón<img id="mobilem" src="./imagenes/mobilem-logo.png" onclick="mobilem_web()" title="Ir a la web de Mobilem" alt="mobilem logo"></h4>
+         <p class="subtitulo2">MOBILEM</p>
+          <span  class="ocultar" id="puesto4">
+            <p id="mobilem-txt"></p> <!-- carga el contenido del texto mediante Fetch API -->
+          </span>                
+         <button class="boton-leer-mas" onclick="abre_texto_puesto4()">Leer más</button>   
+                  
+         <script src="./JS/funciones.js"></script>  
+     </article>       
+    </div>
+        
+    <div id="habilidades">
+     <article>
+        <img class="iconos_categoria" src="./imagenes/habilidades.svg" alt="icono habilidades">
+        <h3>HABILIDADES</h3>
+        <div class="listas">
+           <ul>
+              <li>Trato personal afable y al mismo tiempo asertivo.</li>
+              <li>Excelente adaptación a nuevos escenarios laborales.</li>
+              <li>Capacidad de liderazgo.</li>
+              <li>Perfil de empleado organizado, analista y resolutivo para generar soluciones.</li>
+              <li>Respeto y cumplimiento laboral en presentismo y en puntualidad.</li>
+              <li>Manejo de herramientas informáticas como:</li>
+           </ul>
+        </div>
+          <ul>
+             <li>Office</li>
+               <div class="barra_habilidades">
+                 <div id="barra_office"></div>
+               </div>
+               <button class="boton_niveles" onclick="func_office()">Ver Nivel</button> 
+               <p></p>
+             <li>SumaCRM</li>
+               <div class="barra_habilidades">
+                 <div id="barra_sumacrm"></div>
+               </div>
+               <button class="boton_niveles" onclick="func_sumacrm()">Ver Nivel</button>
+               <p></p>
+             <li>Evernote</li>
+               <div class="barra_habilidades">
+                 <div id="barra_evernote"></div>
+               </div>
+               <button class="boton_niveles" onclick="func_evernote()">Ver Nivel</button>
+               <p></p>
+             <li>Google docs</li>
+               <div class="barra_habilidades">
+                 <div id="barra_googledocs"></div>
+               </div>
+               <button class="boton_niveles" onclick="func_googledocs()">Ver Nivel</button>
+               <p></p>
+             <li>Trello</li>
+               <div class="barra_habilidades">
+                 <div id="barra_trello"></div>
+               </div>
+               <button class="boton_niveles" onclick="func_trello()">Ver Nivel</button>
+          </ul>
+     </article>
+    </div>
+    
+      <div id="educacion">
+       <article>
+        <img class="iconos_categoria" src="./imagenes/educacion.svg" alt="icono educacion">
+         <h3>EDUCACIÓN</h3>
+          <div class="listas">
+           <ul>
+            <li>Licenciatura en Marketing - UCES (en curso - 60% completado).</li>
+            <li>Curso de Oratoria - UBA.</li>
+            <li>Curso de investigación de mercado - CAME.</li>
+            <li>Escuela Secundaria Nº20 José Ramón Fernández - San Justo.</li>
+          </ul>
+         </div>
+        </article>
+      </div>  
+    
+      <div id="idiomas">
+        <article>
+          <img class="iconos_categoria" src="./imagenes/idiomas.svg" alt="icono idiomas">
+        <h3>IDIOMAS</h3>
+         <div class="listas">
+          <ul>
+            <li>Inglés - Nivel B2</li>
+            <div id="barra_idiomas" class="barra_habilidades">
+              <div id="barra_ingles"></div>
+            </div>
+            <button class="boton_niveles" onclick="func_ingles()">Ver Nivel</button>
+            
+          </ul>
+         </div>
+        </article>
+      </div>
+    
+      
+  <footer id="contacto">
+    <h3 class="contacto-txt">CONTACTO</h3>
+      <p class="contacto-txt" >Me podés contactar a mi teléfono<a id="mail" href="tel:1151111234"> (11) 5111-1234</a>, correo electrónico <a id="mail" href="mailto:julio.varela.marketing@gmail.com">julio.varela.marketing@gmail.com</a> o redes sociales que figuran a la izquierda de la pantalla. Gracias por tu visita.</p>
+       <div id="desarrollador">
+        <br>
+        <span><a id="mail" href="mailto:ukino222@gmail.com">Desarrollado por Ignacio Zanella</a></span>
+       </div>  
+  </footer>
+    
+<!--
+  Fuentes visuales de terceras partes usadas con fines educativos sin lucro comercial
+
+Favicon
+Fuente: Iconfinder (usuario Ishkaran)
+https://www.favicon.cc/?action=icon&file_id=985778
+Bajo licencia abierta de Creative Commons Attribution 3.0 Unported.
+
+Whatsapp logo
+Fuente: WIKIMEDIA COMMONS
+(https://commons.wikimedia.org/wiki/File:WhatsApp_logo.svg)
+
+Facebook logo
+Fuente: WIKIMEDIA COMMONS
+(https://commons.wikimedia.org/wiki/File:Facebook_f_logo_(2019).svg)
+
+LinkeIn logo
+Fuente: WIKIMEDIA COMMONS
+(https://commons.wikimedia.org/wiki/File:LinkedIn_icon.svg)
+
+Colgate-Palmolive logo
+Fuente:companieslogo.com
+(https://companieslogo.com/colgate-palmolive/logo/)
+
+Telecom logo
+Fuente:logo-download.com
+(https://logo-download.com/logo/telecom-argentina/)
+https://www.telecom.com.ar/images/logos/telecom_violeta.svg
+
+Rodinar logo
+Fuente: web de Rodinar
+(https://www.rodinar.com.ar/)
+
+Mobilem logo
+Fuente: web de Mobilem
+(https://mobilem.com.ar/)
+
+Iconos de las categorías
+Fuente: Google Icons
+(https://fonts.google.com/icons)
+-->
+
+    
+    </body>
+    </html>
